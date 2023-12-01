@@ -26,11 +26,11 @@ row):
             digit = match_group.group(1)
 
             # if the current match is a word, replace it with a number
-            # we are casting the ints as str, because we want += to concatenate them not add them 
+            # we are casting the ints as str, because we want += to concatenate them not add them
             # together
             for word_to_replace in WORDTODIGIT:
                 digit = digit.replace(word_to_replace, str(WORDTODIGIT[word_to_replace]))
-            
+
             row_int_array.append(digit)
 
         row_calibration_value = ""
