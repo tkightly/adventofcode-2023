@@ -1,7 +1,5 @@
 import re
-
 input = open('1/input.txt', 'r')
-
 total = 0
 
 for row in input:
