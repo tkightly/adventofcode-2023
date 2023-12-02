@@ -21,8 +21,8 @@ with open("2/input.txt", "r", encoding="utf-8") as input_file:
             this_game_minimum_colours[COLOUR] = 0
 
         # For each set, loop through each COLOUR, then each draw to find the minimum needed value for that colour and save it to the this_game_minimum_colours dictionary
-        for set in sets:
-            draws = set.split(", ")
+        for this_set in sets:
+            draws = this_set.split(", ")
             for COLOUR in this_game_minimum_colours:
                 for draw in draws:
                     # If the current draw is the colour we are interested in
@@ -34,13 +34,13 @@ with open("2/input.txt", "r", encoding="utf-8") as input_file:
                             this_game_minimum_colours[COLOUR] = draw.split(" ")[0]
 
         # Multiply the values together to get the power of the set
-        set_power = 1
+        this_set_power = 1
         for colour in this_game_minimum_colours:
-            set_power = set_power * int(this_game_minimum_colours[colour])
+            this_set_power = this_set_power * int(this_game_minimum_colours[colour])
 
         # Add the power to the running total
-        print(f"Set power for this game's minimum set is {set_power}")
-        total += set_power
+        print(f"Set power for this game's minimum set is {this_set_power}")
+        total += this_set_power
 
     print(f"Total is {total}")
 
