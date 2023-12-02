@@ -1,5 +1,4 @@
 """https://adventofcode.com/2023/day/1"""
-import re  # regex module
 
 this_game_minimum_colours = {"red": 0, "green": 0, "blue": 0}
 total = 0
